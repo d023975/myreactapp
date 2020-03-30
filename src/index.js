@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./index.css"
 import ChoiceBar from './components/ChoiceBar';
 import * as serviceWorker from './serviceWorker';
 
