@@ -13,7 +13,17 @@ export default function VotingComponent({ vote }) {
 				</h1>
 				<div className="Description Emphasis">{vote.description}</div>
                 <div>
-					<ChoiceBar title="JavaScript" percent={57} />
+                    {
+                        vote.choices.map(
+                            choice => (
+                                <ChoiceBar
+                                key={choice.id}
+                                title={choice.title}
+                                percent={choice.count * (100 / totalVotes)}
+                                />
+                            )
+                        )
+                    }
 				</div>
 			</div>
 		</div>
