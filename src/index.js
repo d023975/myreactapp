@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import ChoiceBar from './components/ChoiceBar';
 import ModalDialog from './components/ModalDialog';
 import VotingComponent from './components/VotingComponent';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // Sample data
@@ -17,9 +17,15 @@ const vote = {
 	]
 };
 
-ReactDOM.render(<VotingComponent vote={vote} />, document.getElementById('root'));
+ReactDOM.render(
+	<App>
+		<VotingComponent vote={vote} />
+	</App>,
+	document.getElementById('root')
+);
 var title = { subtitle: 'ModalDialog' };
 ReactDOM.render(<ModalDialog title={title} />, document.getElementById('modalMountPoint'));
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
