@@ -9,7 +9,7 @@ export default function VotingComponent({ vote: firstVote }) {
 
 	function registerChoice(choice) {
 		setVote({
-      ...vote, // destructure object, title and escription goes here
+      ...vote, // destructure object, title and description goes here
       choices: vote.choices.map((c) => (choice.id !== c.id ? c : { ...choice, // id + title
                                                                     count: choice.count + 1 })) //count
 		});
