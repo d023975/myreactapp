@@ -7,7 +7,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // Sample data
-const vote = {
+const initialVote = {
 	title: 'How is your day?',
 	description: 'Tell me: how has your day been so far?',
 	choices: [
@@ -17,9 +17,9 @@ const vote = {
 	]
 };
 
-ReactDOM.render(
+ReactDOM.render( //pass initial vote data into vote
 	<App>
-		<VotingComponent vote={vote} />
+		<VotingComponent vote={initialVote} /> 
 	</App>,
 	document.getElementById('root')
 );
